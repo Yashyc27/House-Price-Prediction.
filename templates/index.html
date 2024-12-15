@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict House Price</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='predict.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/faq">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <header class="form-header">
+            <h1 class="animated fadeIn">House Price Prediction</h1>
+            <p class="animated fadeIn delay-1">Fill out the details below to predict the price of a house based on your inputs.</p>
+        </header>
+
+        <section class="form-section">
+            <form method="POST" class="prediction-form">
+                <label for="SQUARE_FT">Square Footage:</label>
+                <input type="text" name="SQUARE_FT" id="SQUARE_FT" required>
+
+                <label for="BHK_NO">BHK:</label>
+                <input type="text" name="BHK_NO" id="BHK_NO" required>
+
+                <label for="city_tier">City Tier:</label>
+                <select name="city_tier" id="city_tier" required>
+                    <option value="1">Tier 1</option>
+                    <option value="2">Tier 2</option>
+                    <option value="3">Tier 3</option>
+                </select>
+
+                <label for="RESALE">Resale:</label>
+                <select name="RESALE" id="RESALE" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+
+                <label for="READY_TO_MOVE">Ready to Move:</label>
+                <select name="READY_TO_MOVE" id="READY_TO_MOVE" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+
+                <label for="RERA">RERA:</label>
+                <select name="RERA" id="RERA" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+
+                <label for="UNDER_CONSTRUCTION">Under Construction:</label>
+                <select name="UNDER_CONSTRUCTION" id="UNDER_CONSTRUCTION" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+
+                <button type="submit" class="submit-button"><i class="fas fa-predict"></i> Predict Price</button>
+            </form>
+        </section>
+
+        {% if Price %}
+        <section class="result-section animated fadeIn delay-2">
+            <div class="result-container">
+                <h2>Predicted Price</h2>
+                <p class="price-display">{{ Price }} Lakhs</p>
+            </div>
+        </section>
+        {% endif %}
+    </div>
+
+    <script src="{{ url_for('static', filename='predict.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='faq.css') }}">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="/contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                <li><a href="/faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            </ul>
+        </nav>
+
+        <!-- FAQ Header -->
+        <header class="faq-header">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our house price prediction tool.</p>
+        </header>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <h3>What is House Price Prediction?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>It is a tool that uses machine learning models to predict the price of a house based on various features like square footage, number of bedrooms, and other factors.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <h3>How accurate is the prediction?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>The accuracy depends on the data used to train the model. However, it provides a fairly accurate estimate based on available information.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <h3>Can I use this for any city?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, as long as the data includes the city tier and other necessary features, the prediction model can be used for different cities.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <h3>Do I need to register to use the prediction tool?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>No, you can use the house price prediction tool without registering or logging in.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='faq.js') }}"></script>
+</body>
+</html>

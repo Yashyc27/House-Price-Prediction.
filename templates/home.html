@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <!-- Typewriter Effect Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typewriter-effect/2.18.0/core.min.js"></script>
+</head>
+<body class="dark-theme">
+    <!-- Background Canvas -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">HousePredict</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to <span id="typewriter"></span></h1>
+            <p class="hero-subtitle">Accurately predict house prices using advanced machine learning models.</p>
+            <a href="/predict" class="cta-button">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Infographics Section -->
+    <section class="infographics">
+        <div class="infographic-item">
+            <i class="fas fa-home infographic-icon"></i>
+            <h3>Predict Real Estate Prices</h3>
+            <p>Using advanced algorithms and data science models.</p>
+        </div>
+        <div class="infographic-item">
+            <i class="fas fa-chart-line infographic-icon"></i>
+            <h3>Advanced Machine Learning</h3>
+            <p>Leverage the power of machine learning for accurate predictions.</p>
+        </div>
+        <div class="infographic-item">
+            <i class="fas fa-users infographic-icon"></i>
+            <h3>Built for Everyone</h3>
+            <p>From realtors to homebuyers, anyone can use the platform.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 HousePredict. All rights reserved.</p>
+        <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Typewriter Effect
+        const typewriter = new Typewriter('#typewriter', {
+            loop: true,
+            delay: 75
+        });
+
+        typewriter
+            .typeString('House Price Prediction')
+            .pauseFor(2000)
+            .deleteAll()
+            .typeString('Advanced ML Tools')
+            .pauseFor(2000)
+            .deleteAll()
+            .typeString('Your Trusted Real Estate Advisor')
+            .pauseFor(2000)
+            .start();
+    </script>
+</body>
+</html>

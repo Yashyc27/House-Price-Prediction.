@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333; /* Dark navbar */
+    padding: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #E0E0E0; /* Light text color */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #FFA500; /* Highlight color on hover */
+}
+
+/* Header Section */
+.form-header {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.form-header h1 {
+    font-size: 36px;
+    color: #FFF; /* White text */
+}
+
+.form-header p {
+    font-size: 18px;
+    color: #DDD; /* Light grey text */
+}
+
+/* Form Section */
+.form-section {
+    background-color: #2C2C2C; /* Darker background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.form-section label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #DDD; /* Light text for labels */
+}
+
+.form-section input,
+.form-section select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 1px solid #444; /* Darker border */
+    background-color: #444; /* Darker background for inputs */
+    color: #FFF; /* Light text for inputs */
+    border-radius: 4px;
+}
+
+.submit-button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Result Section */
+.result-section {
+    margin-top: 30px;
+    text-align: center;
+    background-color: #2C2C2C; /* Dark background for result section */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.result-section h2 {
+    font-size: 28px;
+    color: #FFF; /* White text */
+}
+
+.price-display {
+    font-size: 24px;
+    color: #4CAF50; /* Green for the price */
+    font-weight: bold;
+}
+
+/* Report Section */
+.report-section {
+    margin-top: 40px;
+    background-color: #2C2C2C; /* Dark background for report section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.report-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #FFF; /* White text */
+}
+
+.report-details p {
+    font-size: 18px;
+    color: #DDD; /* Light grey text */
+    margin: 10px 0;
+}
+
+.report-details strong {
+    color: #FFF; /* White text for strong emphasis */
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    .report-details p {
+        font-size: 16px;
+    }
+}
